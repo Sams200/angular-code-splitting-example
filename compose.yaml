@@ -1,0 +1,8 @@
+services:
+  angular_test:
+    build: .
+    ports:
+      - "4200:80"
+    volumes:
+      - .:/app
+      - /app/node_modules

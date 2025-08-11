@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "codeSplitting": {
+    "angular-code-splitting-example": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -56,10 +56,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "codeSplitting:build:production"
+              "buildTarget": "angular-code-splitting-example:build:production"
             },
             "development": {
-              "buildTarget": "codeSplitting:build:development"
+              "buildTarget": "angular-code-splitting-example:build:development"
             }
           },
           "defaultConfiguration": "development"
