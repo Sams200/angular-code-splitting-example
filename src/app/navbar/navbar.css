@@ -1,0 +1,26 @@
+nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+
+  background-color: #aaaaaa;
+
+  font-size: 15px;
+  color: white;
+}
+
+#nav_title{
+  font-weight: bold;
+}
+
+#nav_buttons{
+  display: flex;
+  gap: 15px;
+}
+
+#nav_buttons>a{
+  color: #2222ee;
+  text-decoration: none;
+}
