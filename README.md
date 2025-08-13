@@ -15,9 +15,11 @@ in *src/app/app.routes.ts*
 
 Use a role guard to only allow authorized users to access the route. If an unauthorized user tries to access the route, they will be handled according to the role guard, and the code for the admin page will not be loaded.
 
-Try accessing the *admin* page, the search in the project files
-- If you can find **CHICKEN** then the *unauthorized* page is loaded
-- If you can find **PELICAN** then the *admin* page is loaded
+The app will automatically create an *app_role* item in the browser's local storage. The guard will work based on its value: **"user"** or **"admin"**.
+
+Try accessing the *admin* page, then search in the project files
+- If you can find **@@UNAUTHORIEZED** then the *unauthorized* page is loaded
+- If you can find **@@ADMIN** then the *admin* page is loaded
 
 We can also load components without necessarily using routes. By using a *ViewContainerRef* and *ng-template* we can load components at runtime
 
@@ -47,4 +49,4 @@ And then use *ng-template* in our html
     <button (click)="loadComponent()">Load Dynamic Home Component</button>  
     <ng-template #homeContainer></ng-template>
 
-You should now be able to find **SEAGULL** in the project files
+You should now be able to find **@@DYN_HOME_COMPONENT** in the project files
