@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import {Admin2} from "./admin2/admin2";
+import {AdminNested} from './admin-nested/admin-nested';
 
 @Component({
   selector: 'app-admin',
   imports: [
-    Admin2
+    AdminNested
   ],
   templateUrl: './admin.html',
   styleUrl: './admin.css'

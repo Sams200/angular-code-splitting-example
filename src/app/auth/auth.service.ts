@@ -1,17 +1,17 @@
-import {Injectable} from '@angular/core';
-import {delay, Observable, of} from 'rxjs';
-import {Role} from './role';
+import { Injectable } from "@angular/core";
+import { Observable, of } from "rxjs";
+import { Role } from "./role";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class AuthService {
-  constructor(){}
+  constructor() {}
 
-  public getUserRole(): Observable<Role>{
+  public getUserRole(): Observable<Role> {
     /*
     fake API call
      */
-    return of(Role.USER).pipe(delay(1000));
+    return of(localStorage.getItem("app_role") as Role);
   }
 }
